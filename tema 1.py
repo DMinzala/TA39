@@ -253,3 +253,4 @@ parola abcd => ****
 # obf = len(parola) * '*'
 # print(f'Parola pentru userul {user} este {obf} si are {len(obf)} caractere')
 # # print(f'Parola pentru userul {user} este {len(parola) * "*"} si are {len(parola)} caractere')
+print('parola')
