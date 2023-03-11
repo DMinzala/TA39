@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep  # importam ca sa stea deschisa pagina
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -13,7 +13,7 @@ chrome.maximize_window()
 #navigam catre un url
 chrome.get('https://formy-project.herokuapp.com/')
 
-sleep(4)
+sleep(5)
 #selector by link_text
 link_test = chrome.find_element(By.LINK_TEXT, 'Autocomplete')
 link_test.click()

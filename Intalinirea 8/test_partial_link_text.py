@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep  # importam ca sa stea deschisa pagina
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -16,7 +16,7 @@ chrome.get('https://formy-project.herokuapp.com/')
 sleep(5)
 #selector by partial_link_test
 # try:
-partial_link_test = chrome.find_element(By.PARTIAL_LINK_TEXT, 'Enabled and disabled elements')
+partial_link_test = chrome.find_element(By.PARTIAL_LINK_TEXT, 'Mod')
 partial_link_test.click()
 # except Exception as e:
 #     print(f'Nu am gasit elementul cautat')

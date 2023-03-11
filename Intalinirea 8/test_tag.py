@@ -23,5 +23,5 @@ input_list = chrome.find_elements(By.TAG_NAME, 'input')
 #print(input_list)
 input_list[1].send_keys('Alexandru Ioan Cuza')
 
-sleep(3)
+sleep(5)
 chrome.quit()

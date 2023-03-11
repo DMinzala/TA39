@@ -13,12 +13,12 @@ chrome.maximize_window()
 #navigam catre un url
 chrome.get('http://www.seleniumframework.com/Practiceform/')
 
-
+sleep(5)
 #selector by name
 # link_test = chrome.find_element(By.NAME, 'country')
-# link_test.send_keys('Romania')
+# link_test.send_keys('Romania')  # este mai babeste si scrie de doua ori Romania
 
 chrome.find_element(By.NAME, 'country').send_keys('Romania')
 
-sleep(3)
+sleep(5)
 chrome.quit()

@@ -12,8 +12,7 @@
 ○ Xpath
 '''
 
-'''
-Id
+'''   Id
 
 ● În Terminal: pip install webdriver-manager si pip install selenium
 ● Deschidem Chrome
@@ -29,7 +28,7 @@ Id
 # pip install selenium
 # pip install webdriver-manager
 
-from time import sleep
+from time import sleep  # importam ca sa stea deschisa pagina
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -37,22 +36,21 @@ from selenium.webdriver.common.by import By
 
 # initializam chrome
 s = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=s)
+chrome = webdriver.Chrome(service=s)  # initializarea serviciilor in chrome
 # maximizam fereastra
-driver.maximize_window()
-
+chrome.maximize_window()
 # navigam catre un url
-driver.get('https://formy-project.herokuapp.com/form')
+chrome.get('https://formy-project.herokuapp.com/form')
 
 # selector by ID
 try:
-    first_name = driver.find_element(By.ID, 'first-name')
+    first_name = chrome.find_element(By.ID, 'first-name')
     first_name.send_keys('Matei')
 except Exception as e:
     print('ID-ul introdus nu este corect')
 print('Am ajuns aici')
-#driver.find_element(By.ID, 'first-name').send_keys('TEST AUTOMATION')
+chrome.find_element(By.ID, 'first-name').send_keys('TEST AUTOMATION')
 
 sleep(10)
 # inchidem ferestra de chrome
-driver.quit()
+chrome.quit()

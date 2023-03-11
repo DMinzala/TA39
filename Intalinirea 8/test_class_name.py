@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep  # importam ca sa stea deschisa pagina
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -14,13 +14,13 @@ chrome.maximize_window()
 chrome.get('https://formy-project.herokuapp.com/form')
 
 
-#selector by CLASS_NAME cand e unul singur , e ok daca avem Clasa unica
+#selector by CLASS_NAME cand e unul singur, e ok daca avem Clasa unica
 chrome.find_element(By.CLASS_NAME, 'form-control').send_keys('Matei')
 
 #daca gasim mai multe, le punem intr-o lista
 input_list = chrome.find_elements(By.CLASS_NAME, 'form-control')
 #print(input_list)
-input_list[0].send_keys('TEST ALADIN')
+input_list[1].send_keys('TEST ALADIN')
 
 sleep(3)
 chrome.quit()
