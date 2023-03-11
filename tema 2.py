@@ -406,4 +406,4 @@ Numarul salvat va fi generat random cu metoda gasita in online
 # elif x < dice_roll and  x >= 1:
 #     print(f'Ai pierdut. Ai ales un numar mai mic. Ai ales {x} dar a fost {dice_roll}')
 # else:
-#     print('Alege una dintre cele 6 fete ale zarului ')
+print('Alege una dintre cele 6 fete ale zarului ')
